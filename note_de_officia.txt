@@ -1,0 +1,19 @@
+what is there for you in the Collections Framework.
+
+First, the framework consists of interfaces and implementations. Choosing the right interface means you need to know what functions you want to bring to your application. Is what you need consists in:     
+
+    storing objects and iterating over them?
+    pushing your object to a queue and popping them?
+    retrieving them with the use of a key?
+    accessing them by their index?
+    sorting them?
+    preventing the presence of duplicates, or null values?
+
+Choosing the right implementation means you need to know how you are going to use these functionalities:
+
+    Will accessing your objects be done by iterating, or random, indexed access?
+    Will the objects be fixed at the launch of your application, and will not change much over its lifetime?
+    Will the amount of objects be important with a lot of checking for the presence of certain objects?
+    Is the structure you need to store your objects in will be accessed concurrently?
+
+The Collections Framework can give you the right solution to all of these problems. 
