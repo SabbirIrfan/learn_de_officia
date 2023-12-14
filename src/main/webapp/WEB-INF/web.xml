@@ -3,7 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
-    
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <display-name>HelloServlet</display-name>
@@ -16,7 +18,7 @@
     </servlet>
     <servlet>
         <servlet-name>registerServlet</servlet-name>
-        <display-name>registerServlet</display-name>
+        <display-name>registerServletDemo</display-name>
         <servlet-class>com.servlet.servlet2.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -29,6 +31,6 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>myServlet</servlet-name>
-        <url-pattern>/my-servlet</url-pattern>
+        <url-pattern>/myServlet</url-pattern>
     </servlet-mapping>
 </web-app>

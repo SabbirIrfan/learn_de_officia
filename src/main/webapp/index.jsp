@@ -7,17 +7,19 @@
       .body{
         background: whitesmoke;
       }
-     .formContainer{
-       background: antiquewhite;
-       width: fit-content;
-       border: 1px ridge darkcyan;
-       margin: auto;
-       padding: 20px;
-       border-bottom-left-radius: 20px;
-       border-top-right-radius: 20px;
-       border-bottom-right-radius: 5px;
-       font-size: 18px;
-     }
+      .formContainer{
+
+        background: antiquewhite;
+        width: fit-content;
+        border: 1px ridge darkcyan;
+        margin: auto;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 5px;
+        font-size: 18px;
+        align-content: center;
+      }
      #myForm table tr td input{
        font-size: 16px ;
      }
@@ -27,7 +29,7 @@
 <br/>
   <div class="formContainer">
     <form id="myForm" action="registerServlet" method="post">
-      <h1><%= "Hello User!" %></h1>
+      <h1><%= "Hello user from index!" %></h1>
 
       <table>
         <tr>
