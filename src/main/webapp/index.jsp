@@ -11,6 +11,7 @@
 
         background: antiquewhite;
         width: fit-content;
+        height: max-content;
         border: 1px ridge darkcyan;
         margin: auto;
         padding: 20px;
@@ -19,6 +20,7 @@
         border-bottom-right-radius: 5px;
         font-size: 18px;
         align-content: center;
+
       }
      #myForm table tr td input{
        font-size: 16px ;
@@ -55,6 +57,6 @@
       </table>
     </form>
   </div>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="hello-servlet">Show users</a>
 </body>
 </html>
