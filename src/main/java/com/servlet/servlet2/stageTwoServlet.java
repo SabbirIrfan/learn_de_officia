@@ -29,23 +29,32 @@ public class stageTwoServlet extends HttpServlet {
 
         String email = "";
 
+
         if(cookies == null){
             out.println("<h1> there is no cookies saved</h1>");
         }
         else{
             for(Cookie c: cookies){
                 String Cmail = c.getName();
+
                 out.println("<h5>"+c.getValue()+"</h5>");
-                if(Cmail.equals("email")){
+                if(Cmail.equals("userEmail")){
                     flag = true;
                     email = c.getValue();
+                    System.out.println("success");
                 }
             }
         }
+        System.out.println(email+" email in  the stage two");
+        connectDatabase.updateDataInDatabase(email,request.getParameter("userName"));
+
         if(flag){
             out.println("<h1>The user mail is :: " +email+"</h1>");
 
         }
+
+        out.println("<h1>The user name is :: " +request.getParameter("userName")+ " this is passed through the update form" +"</h1>");
+
 
 
         // Hello

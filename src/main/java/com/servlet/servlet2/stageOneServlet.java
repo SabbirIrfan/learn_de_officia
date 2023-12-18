@@ -24,7 +24,7 @@ public class stageOneServlet extends HttpServlet {
 
         // Hello
         // Cookie creation
-        Cookie c1 = new Cookie("email",request.getParameter("userEmail"));
+        Cookie c1 = new Cookie("userEmail",request.getParameter("userEmail"));
         Cookie c2 = new Cookie("userName",request.getParameter("userName"));
 
         Cookie c3 = new Cookie("userPassword",request.getParameter("userPassword"));

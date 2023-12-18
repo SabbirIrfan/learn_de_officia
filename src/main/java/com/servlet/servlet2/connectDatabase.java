@@ -18,7 +18,7 @@ public class connectDatabase {
         }
 
     }
-    public static void insertDataIntoDatabase(String name, String email, String pass) {
+    public static void insertDataIntoDatabase(String name, String email, String pass, String address) {
         connectDatabase.connect();
 
         String jdbcUrl = connectDatabase.getJdbcUrl();
@@ -26,12 +26,39 @@ public class connectDatabase {
         String password = connectDatabase.getPassword();
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
-            String sql = "INSERT INTO user (name,email,password) VALUES (?, ?,?)";
+            String sql = "INSERT INTO devUser (name,email,password,address) VALUES (?,?,?,?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                System.out.println("what the hell");
+                System.out.println("what the hell insert");
                 preparedStatement.setString(1, name);
                 preparedStatement.setString(2, email);
                 preparedStatement.setString(3, pass);
+                preparedStatement.setString(4, address);
+
+
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle database connection or insertion error
+        }
+    }
+    public static void updateDataInDatabase(String email, String userName) {
+        connectDatabase.connect();
+
+        String jdbcUrl = connectDatabase.getJdbcUrl();
+        String username = connectDatabase.getUsername();
+        String password = connectDatabase.getPassword();
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            System.out.println(email +"email is good?");
+            String sql = "UPDATE devUser SET name = ? WHERE email = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                System.out.println("what the hell in update");
+                preparedStatement.setString(1, userName);
+                preparedStatement.setString(2, email);
+
 
                 preparedStatement.executeUpdate();
             } catch (SQLException e) {
@@ -52,7 +79,7 @@ public class connectDatabase {
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
             // SQL query to retrieve user data
-            String sql = "SELECT email FROM user";
+            String sql = "SELECT email FROM devUser";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql);
                  ResultSet resultSet = preparedStatement.executeQuery()) {
 

@@ -25,21 +25,31 @@
                       <div class="card-content">
                           <h3>Register here</h3>
 
-                          <div class="form"></div>
-
                           <form action="registerServlet" method="post">
-                              <input type="text" name="userName" placeholder="Enter user name" />
-                              <input type="text" name="userEmail" placeholder="Enter user mail" />
+                              <input type="text" name="userName" placeholder="Enter your name" />
+                              <input type="text" name="userEmail" placeholder="Enter your mail" />
+                              <input type="text" name="userAddress" placeholder="Enter your address" />
                               <input type="password" name="userPassword" placeholder="password" />
+
+<%--                              <label for="tech" style=" color: black"> what do you prefer</label>--%>
+
+<%--                              <select id="tech" name="userTech">--%>
+<%--                                  <option value="spring">springBoot</option>--%>
+<%--                                  <option value="node">Node</option>--%>
+<%--                                  <option value="ruby">Ruby</option>--%>
+<%--                              </select>--%>
+
+
+
 
                               <button type="submit" class="btn  blue lighten-2">Submit</button>
                           </form>
                       </div>
-                      <h5 style="align-content: center">Please wait...</h5>
-                      <div class="progress">
+<%--                      <h5 style="align-content: center">Please wait...</h5>--%>
+<%--                      <div class="progress" >--%>
 
-                          <div class="indeterminate"></div>
-                      </div>
+<%--                          <div class="indeterminate"></div>--%>
+<%--                      </div>--%>
                   </div>
 
               </div>

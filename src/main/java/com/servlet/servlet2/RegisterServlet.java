@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
 
 
 
-           connectDatabase.insertDataIntoDatabase(request.getParameter("userName"),request.getParameter("userEmail"),request.getParameter("userPassword"));
+           connectDatabase.insertDataIntoDatabase(request.getParameter("userName"),request.getParameter("userEmail"),request.getParameter("userPassword"),request.getParameter("userAddress") );
 
            request.setAttribute("status",status);
            rd.forward(request,response);
