@@ -34,7 +34,7 @@
     <servlet>
         <servlet-name>login</servlet-name>
         <display-name>login</display-name>
-        <servlet-class>com.servlet.servlet2.loginServlet</servlet-class>
+        <servlet-class>com.servlet.servlet2.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>update</servlet-name>

@@ -35,8 +35,8 @@ public class updateServlet extends HttpServlet {
 
 
 
-                System.out.println(st[1]+" " + request.getParameter("userName")+" "+ request.getParameter("userAddress"));
-                if(connectDatabase.updateDataInDatabase(st[1], request.getParameter("userName"), request.getParameter("userAddress"))){
+                System.out.println(s+" " + request.getParameter("userName")+" "+ request.getParameter("userAddress"));
+                if(connectDatabase.updateDataInDatabase(s, request.getParameter("userName"), request.getParameter("userAddress"))){
                     out.println("<h1> update of the user profile is complete</h1>");
 
                 }else{
