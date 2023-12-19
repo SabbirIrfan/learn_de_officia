@@ -50,6 +50,28 @@
 
 <%--                          <div class="indeterminate"></div>--%>
 <%--                      </div>--%>
+
+                      <div class="card-content">
+                          <h3>Login here</h3>
+
+                          <form action="login" method="post">
+                              <input type="text" name="userEmail" placeholder="Enter your mail" />
+                              <input type="password" name="userPassword" placeholder="password" />
+
+                              <%--                              <label for="tech" style=" color: black"> what do you prefer</label>--%>
+
+                              <%--                              <select id="tech" name="userTech">--%>
+                              <%--                                  <option value="spring">springBoot</option>--%>
+                              <%--                                  <option value="node">Node</option>--%>
+                              <%--                                  <option value="ruby">Ruby</option>--%>
+                              <%--                              </select>--%>
+
+
+
+
+                              <button type="submit" class="btn  blue lighten-2">Submit</button>
+                          </form>
+                      </div>
                   </div>
 
               </div>

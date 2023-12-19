@@ -46,7 +46,7 @@ public class stageTwoServlet extends HttpServlet {
             }
         }
         System.out.println(email+" email in  the stage two");
-        connectDatabase.updateDataInDatabase(email,request.getParameter("userName"));
+//        connectDatabase.updateDataInDatabase(email,request.getParameter("userName"));
 
         if(flag){
             out.println("<h1>The user mail is :: " +email+"</h1>");

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-import static com.servlet.servlet2.connectDatabase.insertDataIntoDatabase;
+
 
 public class RegisterServlet extends HttpServlet {
 

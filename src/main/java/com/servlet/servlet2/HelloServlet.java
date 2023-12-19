@@ -8,7 +8,7 @@ import java.util.List;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-import static com.servlet.servlet2.connectDatabase.getUsers;
+
 
 //@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
@@ -36,7 +36,7 @@ public class HelloServlet extends HttpServlet {
     private void showDataFromDatabase() {
         connectDatabase.connect();
 
-       users =  getUsers();
+//       users =  getUsers();
 
 
     }
