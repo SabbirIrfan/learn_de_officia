@@ -21,6 +21,7 @@ public class LoginServlet extends HttpServlet {
         request.setAttribute("userEmail", request.getParameter("userEmail"));
         request.setAttribute("userAddress", user.get("address"));
         Cookie c = new Cookie("password",request.getParameter("userPassword") );
+//        c.set
         response.addCookie(c);
         RequestDispatcher dispatcher = request.getRequestDispatcher("updateUser.jsp");
         dispatcher.forward(request, response);

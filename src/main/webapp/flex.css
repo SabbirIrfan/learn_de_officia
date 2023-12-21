@@ -1,0 +1,90 @@
+.item {
+
+    /*flex-grow: 1;*/
+    background-color: antiquewhite;
+
+    transition: background-color 0.3s;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    flex-grow: 1;
+
+
+}
+.container1{
+    /*flex-basis: 20%;*/
+    display: flex;
+    height: 20vh;
+    /*background: #6b47ff;*/
+}
+.a{
+    flex-basis: 50%;
+    background: #fe63ff;
+}
+.b{
+    flex-basis: 50%;
+    background: aquamarine;
+}
+
+
+.container2{
+    /*flex-basis: 30%;*/
+    display: flex;
+    height: 40vh;
+    /*background: #1g47ff;*/
+}
+
+.c{
+    background: blue;
+    flex-basis: 30%;
+}
+.d{
+    background: antiquewhite;
+    flex-basis: 70%;
+}
+.item{
+    /*flex-grow: 1;*/
+}
+
+.container3{
+    display: flex;
+    height: 70vh;
+
+
+}
+.container3-1{
+    flex-basis: 50%;
+    flex-direction: row;
+
+}
+.e{
+    flex-basis: 50%;
+}
+.f{
+    flex-basis: 50%;
+
+}
+.container3-2{
+    flex-basis: 50%;
+    height: 70vh;
+
+}
+.g{
+
+}
+.h{
+
+}
+.i{
+
+}
+.item:hover{
+    background-color: navajowhite;
+
+}
+
+
