@@ -1,4 +1,4 @@
-package com.servlet.servlet2;
+package com.servlet.servlet2.corejava;
 
 import java.util.ArrayList;
 import java.util.List;

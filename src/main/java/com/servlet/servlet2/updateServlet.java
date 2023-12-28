@@ -1,5 +1,6 @@
 package com.servlet.servlet2;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
@@ -38,8 +39,16 @@ public class updateServlet extends HttpServlet {
                 System.out.println(s+" " + request.getParameter("userName")+" "+ request.getParameter("userAddress"));
                 if(connectDatabase.updateDataInDatabase(s, request.getParameter("userName"), request.getParameter("userAddress"))){
                     out.println("<h1> update of the user profile is complete</h1>");
+                    request.setAttribute("userName", request.getParameter("userName"));
+                    request.setAttribute("userEmail", request.getParameter("userEmail"));
+                    request.setAttribute("userAddress", request.getParameter("userAddress"));
+                    Cookie c = new Cookie("password",request.getParameter("userPassword") );
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("updateUser.jsp");
+                    request.setAttribute("status","success");
+                    dispatcher.forward(request, response);
 
                 }else{
+                    request.setAttribute("status","Unsuccessfull");
                     out.println("<h1> no row effected .. please check for bugs in the update</h1>");
 
                 }

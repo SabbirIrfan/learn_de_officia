@@ -55,32 +55,38 @@
     height: 70vh;
 
 
-}
-.container3-1{
-    flex-basis: 50%;
-    flex-direction: row;
 
+}
+
+.container3-1{
+    display: flex;
+    flex-basis: 100%;
+    /*flex-direction: row;*/
 }
 .e{
     flex-basis: 50%;
+    height: 100%;
 }
 .f{
     flex-basis: 50%;
+    height: 100%;
 
 }
 .container3-2{
+    display: flex;
     flex-basis: 50%;
     height: 70vh;
+    flex-direction: column;
 
 }
 .g{
-
+    height: 80%;
 }
 .h{
-
+    height: 80%;
 }
 .i{
-
+    height: 80%;
 }
 .item:hover{
     background-color: navajowhite;

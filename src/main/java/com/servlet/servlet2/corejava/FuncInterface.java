@@ -1,7 +1,5 @@
-package com.servlet.servlet2;
+package com.servlet.servlet2.corejava;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -21,11 +19,15 @@ interface  func{
     public  void fun();
 
 }
-class user{
+class user<T>{
     public int age;
-    public user(int x){
-        this.age = x;
+
+    public <T extends   Number > void findMax(List<T> list) {
+        // method implementation
+        list.forEach(System.out::println);
+        
     }
+
 
     public int getAge() {
         return age;
@@ -38,6 +40,7 @@ class func2 implements func{
     public void fun() {
         System.out.println("jah implement korlam.");
     }
+
 
     public static void groupByMethod(){
         List<String> strings = List.of("one","two","three","four");
@@ -57,33 +60,27 @@ class func2 implements func{
 }
 public class FuncInterface {
 
-
     public static void main(String[] args) {
-        user u0 = new user(1);
-        user u1 = new user(2);
-        user u2 = new user(2);
-        user u3 = new user(4);
-        List<user> list = new ArrayList<>();
-        list.add(u0);
-        list.add(u1);
-        list.add(u2);
-        list.add(u3);
-        func2.groupByMethod();
-        int sum = list.stream().map(user::getAge).filter(age-> age>1).reduce(0, Integer::sum);
-        System.out.println(sum);
+
+        user<Integer> u = new user<>();
+
+        u.findMax(List.of(1,2,3));
+
+//        user u0 = new user(1);
+//        user u1 = new user(2);
+//        user u2 = new user(2);
+//        user u3 = new user(4);
+//        List<user> list = new ArrayList<>();
+//        list.add(u0);
+//        list.add(u1);
+//        list.add(u2);
+//        list.add(u3);
+//        func2.groupByMethod();
+//        int sum = list.stream().map(user::getAge).filter(age-> age>1).reduce(0, Integer::sum);
+//        System.out.println(sum);
 
 
 
 
-//        func ff =  () ->System.out.println("its as functional interface ");
-//        List<Integer> list = Arrays.asList(1,2,3,4,5);
-//
-//        Stream<Integer> strm = list.stream().filter(n-> n<4);
-////        strm.forEach(System.out::println);
-//        System.out.println(strm.reduce(3,(c,e)->{ // here in ter initial the c value is assigned with the identity value given in the first perametre
-//            System.out.println(c +" "+ e);
-//            return c+e;
-//        } ));// here will give error . stream can only be used once.
-//        ff.fun();
     }
 }

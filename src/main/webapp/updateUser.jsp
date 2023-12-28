@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <html>
 <head>
     <title>Update User</title>
@@ -15,7 +16,21 @@
             <div class="card">
                 <div class="card-content">
                     <h3>Hello <%= request.getAttribute("userName") %></h3>
+                    <%
+                        try {
 
+                            if (request.getAttribute("status").equals("success")){
+                                out.println("<h2> successfully updated </h2>");
+
+                            } else if  (request.getAttribute("status").equals("success")){
+                                out.println("<h2> updating failed </h2>");
+
+                            }
+
+                        }catch (Exception e){
+                            System.out.println(e.getMessage());
+                        }
+                    %>
                     <form action="update" method="post">
                         <input type="text" name="userName" value="<%= request.getAttribute("userName") %>" required/><br/>
                         <input type="text" name="userEmail" value="<%= request.getAttribute("userEmail") %>" readonly/><br/>
