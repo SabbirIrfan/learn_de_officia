@@ -4,8 +4,21 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+
+
+class how {
+    @Override
+    public String toString() {
+
+        return "hello you have just called the ohject";
+    }
+}
 public class Randomm {
     public static void main(String[] args) {
+
+        how h = new how();
+
+        System.out.println(h);
 
 //        Random random = new Random(314L);
 //        List<String> letters =

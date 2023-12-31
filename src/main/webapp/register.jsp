@@ -1,23 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: john_doe
-  Date: ১৪/১২/২৩
-  Time: ৩:৩২ PM
-  To change this template use File | Settings | File Templates.
---%>
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+
+
 <html>
 <head>
     <title>Title</title>
 
-    <!-- Compiled and minified CSS -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 <body>
+<%--&lt;%&ndash;<div>&ndash;%&gt;--%>
+<%--<c:out value="Its the core taglib"> hellow</c:out>--%>
+
+<%--<sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/regiForm"--%>
+<%--                   user="root" password=""--%>
+<%--/>--%>
+<%--    <sql:query var="resultSet" dataSource="${db}">select * from devUser</sql:query>--%>
+<%--    <c:forEach items="${resultSet.rows}" var="user">--%>
+<%--        <br>--%>
+<%--        <c:out value="in for loop">jstl</c:out>--%>
+<%--        <c:out value="${user.name}"></c:out>--%>
+<%--    </c:forEach>--%>
+    <br/>
+<%--</div>--%>
       <div class="container">
           <div class="row" >
               <div class="col m6 offset-m3">

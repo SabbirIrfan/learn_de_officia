@@ -1,3 +1,6 @@
+<%--<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>--%>
+<%--<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -28,10 +31,20 @@
   </style>
 </head>
 <body class="body">
+<%--    <sql:setDataSource var = "db" driver="com.mysql.jdbc.Driver" url= "jdbc:mysql://localhost:3306/regiForm" user="root" password="" />--%>
+<%--    <sql:query var="resiltSet" dataSource="${db}">select * from devUser</sql:query>--%>
+<%--     <c:forEach items="${resiltSet.rows}" var="user">--%>
+<%--       <br>--%>
+<%--       <c:out value="${user.name}"></c:out>--%>
+<%--     </c:forEach>--%>
+
+    <a href="register.jsp">Click here to goto Register</a>
+
 <br/>
   <div class="formContainer">
     <form id="myForm" action="registerServlet" method="post">
       <h1><%= "Hello user from index!" %></h1>
+
 
       <table>
         <tr>
