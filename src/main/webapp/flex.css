@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: column;
     height: 130vh;
-    flex-grow: 1;
 
 
 }
@@ -55,38 +54,32 @@
     height: 70vh;
 
 
-
 }
-
 .container3-1{
-    display: flex;
-    flex-basis: 100%;
-    /*flex-direction: row;*/
+    flex-basis: 50%;
+    flex-direction: row;
+
 }
 .e{
     flex-basis: 50%;
-    height: 100%;
 }
 .f{
     flex-basis: 50%;
-    height: 100%;
 
 }
 .container3-2{
-    display: flex;
     flex-basis: 50%;
     height: 70vh;
-    flex-direction: column;
 
 }
 .g{
-    height: 80%;
+
 }
 .h{
-    height: 80%;
+
 }
 .i{
-    height: 80%;
+
 }
 .item:hover{
     background-color: navajowhite;

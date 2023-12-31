@@ -18,17 +18,17 @@
 </head>
 <body>
 <%--&lt;%&ndash;<div>&ndash;%&gt;--%>
-<%--<c:out value="Its the core taglib"> hellow</c:out>--%>
+<c:out value="Its the core taglib"> hellow</c:out>
 
-<%--<sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/regiForm"--%>
-<%--                   user="root" password=""--%>
-<%--/>--%>
-<%--    <sql:query var="resultSet" dataSource="${db}">select * from devUser</sql:query>--%>
-<%--    <c:forEach items="${resultSet.rows}" var="user">--%>
-<%--        <br>--%>
-<%--        <c:out value="in for loop">jstl</c:out>--%>
-<%--        <c:out value="${user.name}"></c:out>--%>
-<%--    </c:forEach>--%>
+<sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/regiForm"
+                   user="root" password=""
+/>
+    <sql:query var="resultSet" dataSource="${db}">select * from devUser</sql:query>
+    <c:forEach items="${resultSet.rows}" var="user">
+        <br>
+        <c:out value="in for loop">jstl</c:out>
+        <c:out value="${user.name}"></c:out>
+    </c:forEach>
     <br/>
 <%--</div>--%>
       <div class="container">
